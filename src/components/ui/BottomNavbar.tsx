@@ -16,7 +16,6 @@ import {
   CircuitBoard,
   LayoutDashboard,
   Star,
-  FilePlus2 // Added FilePlus2 for AI Document Creator
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -27,7 +26,6 @@ const aiTools = [
   { to: "/tools/doubt-solver", icon: HelpCircle, label: "Doubt Solver" },
   { to: "/tools/notes", icon: FilePen, label: "Notes" },
   { to: "/tools/premium-chat", icon: MessageSquare, label: "Premium Chat" },
-  { to: "/tools/ai-document-creator", icon: FilePlus2, label: "AI Doc Creator" },
 ];
 
 const BottomNavbar = () => {
