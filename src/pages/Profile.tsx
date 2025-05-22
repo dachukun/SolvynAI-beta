@@ -20,7 +20,7 @@ const Profile = () => {
             Manage your personal information and settings
           </p>
         </div>
-        <div className="cursor-pointer" onClick={() => navigate('/profile')}>
+        <div className="cursor-pointer">
           <Avatar className="h-10 w-10">
             <AvatarImage src="" alt={user?.email || "User"} />
             <AvatarFallback>
