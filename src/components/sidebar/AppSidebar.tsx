@@ -108,6 +108,8 @@ export const AppSidebar: React.FC = () => {
         return 'Doubt Solver';
       case '/tools/notes':
         return 'Notes';
+      case '/tools/premium-chat':
+        return 'Premium Chat';
       case '/upgrade':
         return 'Upgrade';
       default:
@@ -136,7 +138,7 @@ export const AppSidebar: React.FC = () => {
   const otherAiTools = [
     
     { to: "/tools/notes", icon: FilePen, label: "Notes" },
-    
+    { to: "/tools/premium-chat", icon: BrainCircuit, label: "Premium Chat" },
     
   ];
 

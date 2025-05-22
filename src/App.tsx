@@ -25,6 +25,7 @@ import DoubtSolver from "./pages/tools/DoubtSolver";
 import AnswerSheetAnalyzer from "./pages/tools/AnswerSheetAnalyzer";
 
 import GenerateQuestionPaper from "./pages/tools/GenerateQuestionPaper";
+import PremiumChatPage from "./pages/tools/PremiumChatPage"; // Added PremiumChatPage import
  
 
 const queryClient = new QueryClient();
@@ -94,6 +95,14 @@ const App = () => (
                     <GenerateQuestionPaper />
                   </ProtectedRoute>
                 } 
+              />
+              <Route 
+                path="/tools/premium-chat"
+                element={ 
+                  <ProtectedRoute>
+                    <PremiumChatPage />
+                  </ProtectedRoute>
+                }
               />
               
               {/* Protected Routes */}
