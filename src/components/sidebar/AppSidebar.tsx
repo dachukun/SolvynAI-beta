@@ -108,8 +108,6 @@ export const AppSidebar: React.FC = () => {
         return 'Premium Chat';
       case '/upgrade':
         return 'Upgrade';
-      case '/tools/ai-document-creator':
-        return 'AI Document Creator';
       default:
         return '';
     }
@@ -144,7 +142,6 @@ export const AppSidebar: React.FC = () => {
   // Other AI Tools links data
   const otherAiTools = [
     { to: "/tools/notes", icon: FilePen, label: "Notes" },
-    { to: "/tools/ai-document-creator", icon: FilePlus2, label: "AI Document Creator" },
   ];
 
   return (

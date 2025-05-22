@@ -26,7 +26,7 @@ import AnswerSheetAnalyzer from "./pages/tools/AnswerSheetAnalyzer";
 
 import GenerateQuestionPaper from "./pages/tools/GenerateQuestionPaper";
 import PremiumChatPage from "./pages/tools/PremiumChatPage"; // Added PremiumChatPage import
-import AiDocumentCreatorPage from "./pages/tools/AiDocumentCreatorPage"; // Added AiDocumentCreatorPage import
+
  
 
 const queryClient = new QueryClient();
@@ -105,14 +105,7 @@ const App = () => (
                   </ProtectedRoute>
                 } 
               />
-              <Route 
-                path="/tools/ai-document-creator" 
-                element={
-                  <ProtectedRoute>
-                    <AiDocumentCreatorPage />
-                  </ProtectedRoute>
-                } 
-              />
+
               
               {/* Protected Routes */}
               <Route 
