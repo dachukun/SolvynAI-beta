@@ -10,12 +10,13 @@ import {
   FileText,
   FileSearch,
   HelpCircle,
-  MessageCircle,
+  MessageSquare, // Changed from MessageCircle to MessageSquare for consistency
   FilePen,
   BrainCircuit,
   CircuitBoard,
   LayoutDashboard,
-  Star
+  Star,
+  FilePlus2 // Added FilePlus2 for AI Document Creator
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -24,10 +25,9 @@ const aiTools = [
   { to: "/tools/generate-question-paper", icon: FileText, label: "Practice Paper Generator" },
   { to: "/tools/answer-sheet-analyzer", icon: FileSearch, label: "Answer Sheet Analyzer" },
   { to: "/tools/doubt-solver", icon: HelpCircle, label: "Doubt Solver" },
-  
   { to: "/tools/notes", icon: FilePen, label: "Notes" },
-  
-  
+  { to: "/tools/premium-chat", icon: MessageSquare, label: "Premium Chat" },
+  { to: "/tools/ai-document-creator", icon: FilePlus2, label: "AI Doc Creator" },
 ];
 
 const BottomNavbar = () => {

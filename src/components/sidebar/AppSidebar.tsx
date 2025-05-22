@@ -18,7 +18,9 @@ import {
   HelpCircle, 
   FilePen,
   ArrowUpRight,
-  AlignCenterIcon
+  AlignCenterIcon,
+  MessageSquare, // Added MessageSquare for Premium Chat
+  FilePlus2 // Added FilePlus2 for AI Document Creator
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTheme } from '@/contexts/ThemeContext';
@@ -106,6 +108,8 @@ export const AppSidebar: React.FC = () => {
         return 'Premium Chat';
       case '/upgrade':
         return 'Upgrade';
+      case '/tools/ai-document-creator':
+        return 'AI Document Creator';
       default:
         return '';
     }
@@ -115,6 +119,15 @@ export const AppSidebar: React.FC = () => {
 
   // If mobile, force sidebar to be collapsed
   const effectiveCollapsed = isMobile ? true : isCollapsed;
+
+  // Main navigation links
+  const mainNavLinks = [
+    { to: "/", icon: LayoutDashboard, label: "Dashboard" },
+    { to: "/focus", icon: Focus, label: "Focus" },
+    { to: "/todolist", icon: ListChecks, label: "Todolist" },
+    { to: "/profile", icon: User, label: "Profile" },
+    { to: "/tools/premium-chat", icon: MessageSquare, label: "Premium Chat" },
+  ];
 
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed);
@@ -130,9 +143,8 @@ export const AppSidebar: React.FC = () => {
 
   // Other AI Tools links data
   const otherAiTools = [
-    
     { to: "/tools/notes", icon: FilePen, label: "Notes" },
-    
+    { to: "/tools/ai-document-creator", icon: FilePlus2, label: "AI Document Creator" },
   ];
 
   return (
@@ -169,10 +181,15 @@ export const AppSidebar: React.FC = () => {
 
         <div className="flex-1 overflow-y-auto py-1 no-scrollbar hide-scrollbar">
           <SidebarSection title="Main" isCollapsed={effectiveCollapsed}>
-            <SidebarLink to="/" icon={LayoutDashboard} label="Dashboard" isCollapsed={effectiveCollapsed} />
-            <SidebarLink to="/focus" icon={Focus} label="Focus" isCollapsed={effectiveCollapsed} />
-            <SidebarLink to="/todolist" icon={ListChecks} label="Todolist" isCollapsed={effectiveCollapsed} />
-            <SidebarLink to="/profile" icon={User} label="Profile" isCollapsed={effectiveCollapsed} />
+            {mainNavLinks.map(({ to, icon, label }) => (
+              <SidebarLink
+                key={to}
+                to={to}
+                icon={icon}
+                label={label}
+                isCollapsed={effectiveCollapsed}
+              />
+            ))}
             {/* AI Study Tools Section */}
             <SidebarSection title="AI Study Tools" isCollapsed={effectiveCollapsed}>
               {aiStudyTools.map(({ to, icon, label }) => (

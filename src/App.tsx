@@ -25,6 +25,8 @@ import DoubtSolver from "./pages/tools/DoubtSolver";
 import AnswerSheetAnalyzer from "./pages/tools/AnswerSheetAnalyzer";
 
 import GenerateQuestionPaper from "./pages/tools/GenerateQuestionPaper";
+import PremiumChatPage from "./pages/tools/PremiumChatPage"; // Added PremiumChatPage import
+import AiDocumentCreatorPage from "./pages/tools/AiDocumentCreatorPage"; // Added AiDocumentCreatorPage import
  
 
 const queryClient = new QueryClient();
@@ -92,6 +94,22 @@ const App = () => (
                 element={
                   <ProtectedRoute>
                     <GenerateQuestionPaper />
+                  </ProtectedRoute>
+                } 
+              />
+              <Route 
+                path="/tools/premium-chat" 
+                element={
+                  <ProtectedRoute>
+                    <PremiumChatPage />
+                  </ProtectedRoute>
+                } 
+              />
+              <Route 
+                path="/tools/ai-document-creator" 
+                element={
+                  <ProtectedRoute>
+                    <AiDocumentCreatorPage />
                   </ProtectedRoute>
                 } 
               />
