@@ -10,8 +10,8 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { MessageSquare, Send, Bot, User, Loader2, BrainCircuit } from 'lucide-react';
 
-const OPENROUTER_API_KEY = "<YOUR_OPENROUTER_API_KEY>"; // Replace with your actual key or manage securely
-const YOUR_SITE_URL = "https://your-site-url.com"; // Replace with your site URL
+const OPENROUTER_API_KEY = "<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>"; // Replace with your actual key or manage securely
+const YOUR_SITE_URL = "https://betasolvynai.vercel.app/"; // Replace with your site URL
 const YOUR_SITE_NAME = "Solvyn AI"; // Replace with your site name
 
 interface Message {
