@@ -5,26 +5,20 @@ import solvynaiLogoDark from '@/assets/images/SolvynAI logo dark transparent.png
 import { NavLink } from 'react-router-dom';
 import {
   LayoutDashboard,
-  BookOpen,
   Focus,
   User,
-  BrainCircuit, // Changed from Settings
-  ListChecks, // For Todolist
-  Star,
+  ListChecks,
   Menu,
   X,
   Sun,
   Moon,
-  LogOut,
-  ChevronDown,
-  AlignLeft, 
+  LogOut, 
   FileText, 
   FileSearch, 
   HelpCircle, 
-  MessageCircle, 
   FilePen,
-  CircuitBoard,
-  ArrowUpRight
+  ArrowUpRight,
+  AlignCenterIcon
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTheme } from '@/contexts/ThemeContext';
@@ -128,7 +122,7 @@ export const AppSidebar: React.FC = () => {
 
   // AI Study Tools links data
   const aiStudyTools = [
-    { to: "/tools/summarizer", icon: AlignLeft, label: "Summarizer" },
+    { to: "/tools/summarizer", icon: AlignCenterIcon, label: "Summarizer" },
     { to: "/tools/generate-question-paper", icon: FileText, label: "Practice Paper Generator" },
     { to: "/tools/answer-sheet-analyzer", icon: FileSearch, label: "Answer Sheet Analyzer" },
     { to: "/tools/doubt-solver", icon: HelpCircle, label: "Doubt Solver" },
@@ -138,7 +132,6 @@ export const AppSidebar: React.FC = () => {
   const otherAiTools = [
     
     { to: "/tools/notes", icon: FilePen, label: "Notes" },
-    { to: "/tools/premium-chat", icon: BrainCircuit, label: "Premium Chat" },
     
   ];
 
