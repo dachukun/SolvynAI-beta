@@ -1,0 +1,179 @@
+
+.auth-page {
+  --auth-primary: #8B5CF6; /* Purple to match theme */
+  --auth-accent: #FEC6A1; /* Soft orange from sunset */
+  --auth-accent-hover: #FDE1D3; /* Soft peach */
+  --auth-card-bg: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+  --auth-card-border: rgba(251, 146, 60, 0.2); /* Soft orange border */
+  --auth-text-primary: #222222;
+  --auth-text-secondary: #555555;
+}
+
+.dark .auth-page {
+  --auth-primary: #9B87F5; /* Lighter purple for dark mode */
+  --auth-accent: #FEC6A1; /* Same accent */
+  --auth-accent-hover: #FDE1D3; /* Same accent hover */
+  --auth-card-bg: rgba(34, 34, 34, 0.9); /* Dark semi-transparent */
+  --auth-card-border: rgba(251, 146, 60, 0.3); /* Soft orange border */
+  --auth-text-primary: #FFFFFF;
+  --auth-text-secondary: #BBBBBB;
+}
+
+.auth-container {
+  background: linear-gradient(to right, rgba(255,255,255,0.8), transparent);
+}
+
+.dark .auth-container {
+  background: linear-gradient(to right, rgba(34,34,34,0.8), transparent);
+}
+
+/* Softer transition between image and content */
+.image-container::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 20px; /* Decreased for subtler transition */
+  background: linear-gradient(to right, var(--background), transparent);
+  z-index: 10;
+}
+
+.auth-button {
+  background: var(--auth-primary) !important;
+  transition: all 0.3s ease;
+}
+
+.auth-button:hover {
+  background: var(--auth-primary) !important;
+  filter: brightness(1.1);
+}
+
+.auth-card {
+  background: var(--auth-card-bg) !important;
+  border-color: var(--auth-card-border) !important;
+  backdrop-filter: blur(8px);
+}
+
+.auth-link {
+  color: var(--auth-primary) !important;
+}
+
+/* Brand positioning inside image on desktop */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.image-branding {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 5;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.centered-branding h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.centered-branding p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Mobile styles - image as background */
+@media (max-width: 767px) {
+  .auth-page {
+    position: relative;
+  }
+  
+  .mobile-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .mobile-bg-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+  }
+  
+  .auth-container {
+    background: rgba(0,0,0,0.5);
+    width: 100% !important;
+    z-index: 10;
+  }
+
+  /* Show SolvynAI title in mobile view */
+  .mobile-branding {
+    display: block;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .auth-card {
+    background: rgba(255,255,255,0.9) !important;
+  }
+  
+  .dark .auth-card {
+    background: rgba(34,34,34,0.9) !important;
+  }
+}
+
+
+/* SolvynAI title font sizes and alignment */
+.solvynai-title-desktop {
+  font-size: 2.5rem !important;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-align: left;
+  margin-left: 0;
+}
+.solvynai-title-mobile {
+  font-size: 2rem !important;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.centered-branding {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: left;
+}
+@media (max-width: 767px) {
+  .solvynai-title-mobile {
+    font-size: 1.5rem !important;
+    text-align: left;
+    margin-left: 0;
+  }
+  .centered-branding {
+    left: 5%;
+    align-items: flex-start;
+    text-align: left;
+  }
+}

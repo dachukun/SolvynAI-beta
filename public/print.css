@@ -1,0 +1,26 @@
+@media print {
+  .solvynai-page header,
+  .solvynai-page .input-section,
+  .solvynai-page button:not(#print-button) {
+    display: none !important;
+  }
+
+  .solvynai-page {
+    padding: 20px !important;
+  }
+
+  .latex-output {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+    font-family: monospace !important;
+    font-size: 12px !important;
+    background: white !important;
+    color: black !important;
+  }
+}
