@@ -71,9 +71,10 @@ const AuthPage = () => {
 
   return (
     <div className="auth-page min-h-screen flex overflow-hidden">
-      {/* Mobile background (only visible on mobile) */}
-      <div className="mobile-bg-container md:hidden">
-        {/* Removed Lovable image */}
+      {/* Mobile background with gradient overlay */}
+      <div className="mobile-bg-container md:hidden absolute inset-0 bg-cover bg-center"
+           style={{ backgroundImage: 'url(/src/assets/images/authentication.png)' }}>
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
       </div>
       {/* Left section - Form content */}
       <div className="w-full md:w-1/4 p-6 flex flex-col justify-center items-center relative z-10 auth-container">
