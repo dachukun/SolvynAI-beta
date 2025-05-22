@@ -10,7 +10,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 
 const Profile = () => {
-  const { user } = useAuth();
+  const { user, signOut } = useAuth();
   return (
     <div className="solvynai-page">
       <header className="mb-8 flex justify-between items-start">
@@ -65,6 +65,18 @@ const Profile = () => {
           </Card>
         </div>
       </div>
+        <div className="mt-8">
+          <Button 
+            variant="destructive" 
+            className="w-full"
+            onClick={() => {
+              signOut();
+              window.location.href = '/login';
+            }}
+          >
+            Log Out
+          </Button>
+        </div>
     </div>
   );
 };
